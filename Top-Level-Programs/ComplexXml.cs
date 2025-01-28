@@ -41,7 +41,7 @@ fileStreamOptions.Mode = FileMode.CreateNew;
 fileStreamOptions.Options = FileOptions.None;
 fileStreamOptions.PreallocationSize = 8 * 16;
 if (Environment.GetEnvironmentVariable("OS") != null
-    && !Environment.GetEnvironmentVariable("OS").Contains("Windows"))
+    & !Environment.GetEnvironmentVariable("OS").Contains("Windows"))
 {
     fileStreamOptions.UnixCreateMode = UnixFileMode.UserWrite;
 }
