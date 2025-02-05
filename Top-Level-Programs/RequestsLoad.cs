@@ -1,4 +1,9 @@
-﻿
+﻿/*
+ * Description: This program creates a loop for HTTP requests.
+ * Features: Async, multi-threaded, client programming
+ * Date: 2-4-2025
+ * Author: Robert Howell
+ */
 int expected = 500; //Num requests to send to url
 int sent = 0; //Num requests sent
 
