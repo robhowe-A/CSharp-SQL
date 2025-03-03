@@ -1,15 +1,26 @@
+/*
+ * Description: This program creates a json string and then deserializes it.
+ * Features: Object initializers, JsonSerializer
+ * Date: 1-27-2025
+ * Update: 3-3-2025
+ * Author: Robert Howell
+ */
 using System.Text.Json;
 
 // Create some retail stores data
-RetailStore retailStore = new();
-retailStore.Name = "Shoe Testers";
-retailStore.Number = 01;
-retailStore.Locations = new List<string> { "Houston", "Lubbock" };
+RetailStore retailStore = new() 
+{
+    Name = "Shoe Testers",
+    Number = 01,
+    Locations = new List<string> { "Houston", "Lubbock" }
+};
 
-RetailStore retailStoreTwo = new();
-retailStoreTwo.Name = "Clothes Makers";
-retailStoreTwo.Number = 02;
-retailStoreTwo.Locations = new List<string> { "Abilene", "Houston" };
+RetailStore retailStoreTwo = new()
+{
+    Name = "Clothes Makers",
+    Number = 02,
+    Locations = new List<string> { "Abilene", "Houston" }
+};
 
 // Add the stores as a list
 List<RetailStore> AllRetailStores = new(8) { retailStore, retailStoreTwo };
@@ -44,7 +55,7 @@ foreach (RetailStore store in AllRetailStores)
 }
 
 // Retail stores class
-internal class RetailStore
+internal struct RetailStore
 {
     public string Name {get; set;}
     public int Number { get; set; }
