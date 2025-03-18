@@ -1,3 +1,9 @@
+/*
+ * Description: This class writes a string to a log file at a chosen path.
+ * 
+ * Date: 3-18-2025
+ * Author: Robert Howell
+ */
 sealed class CreateLogFile : IDisposable
 {
     public string Dir { get; set; }
