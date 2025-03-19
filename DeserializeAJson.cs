@@ -1,4 +1,10 @@
-﻿using System.Text.Json;
+/*
+ * Description: This program turns a json string into program objects.
+ * 
+ * Date: 3-18-2025
+ * Author: Robert Howell
+ */
+using System.Text.Json;
 
 namespace DeserializeExtra
 {
@@ -42,13 +48,17 @@ public class WeatherForecast
   }
 ]
 ";
-            ////WORKING JSON DESERIALIE
-            //var weatherforecast = JsonSerializer.Deserialize<WeatherForecast[]>(jsonString);
-            var company = (WeatherForecast[]?)JsonSerializer.Deserialize(jsonString, typeof(WeatherForecast[]), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            // Deserialize json to object array
+            var company = (WeatherForecast[]?)JsonSerializer.Deserialize
+                (jsonString, typeof(WeatherForecast[]), new JsonSerializerOptions() 
+                { 
+                     PropertyNameCaseInsensitive = true 
+                });
 
-            // Original attempt
-            // WeatherForecast? weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
+            // Output the date
             Console.WriteLine($"Date: {company?.ElementAt(0).Date}");
+
+            // Output the temperature
             Console.WriteLine($"TemperatureRanges: {company?.ElementAt(0).launches.ElementAt(0).provider}");
         }
     }
