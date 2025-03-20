@@ -9,7 +9,7 @@ internal abstract class BitsProduct
     protected abstract decimal Price { get; init; }
     protected abstract string Maker { get; init; }
     protected abstract DateTime DateListed { get; set; }
-    protected abstract Guid Id { get; }
+    protected abstract Guid Id { get; init; }
     protected abstract ulong ItemNumber { get; init; }
 
     public abstract void ShowInfo();
