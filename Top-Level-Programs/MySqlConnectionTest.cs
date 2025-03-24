@@ -1,4 +1,9 @@
-﻿
+﻿/*
+ * Description: This script connects to a MySQL server via connection string.
+ * Date: 3-24-2025
+ * Author: Robert Howell
+ */
+
 
 MySql.Data.MySqlClient.MySqlConnection conn;
 string myConnectionString;
