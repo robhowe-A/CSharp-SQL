@@ -96,7 +96,7 @@ namespace SpaceFlight_News_App.Models
         public async Task<Article[]> QueryArticleSites(string newsSiteInputValue)
         {
             //Return the articles matching a provider
-            var newSiteArticles = from a in _context.Article where a.newsSite == @$"{newsSiteInputValue}" select a;
+            var newSiteArticles = from a in _context.Article where a.newsSite == newsSiteInputValue select a;
 
             return await newSiteArticles.ToArrayAsync();
         }
@@ -177,4 +177,5 @@ namespace SpaceFlight_News_App.Models
             ContextDispose();
         }
     }
+
 }
